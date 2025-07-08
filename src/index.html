@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mi App Inventario - Login</title>
+    <!-- Enlazamos nuestro archivo de estilos CSS -->
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!-- Contenedor para la pantalla de login -->
+    <div id="login-screen">
+      <h1>Iniciar Sesión</h1>
+      <input type="text" id="username" placeholder="Usuario" required />
+      <input type="password" id="password" placeholder="Contraseña" required />
+      <button id="login-button">Entrar</button>
+      <p id="error-message" style="color: red; display: none;">
+        Usuario o contraseña incorrectos.
+      </p>
+    </div>
+
+    <!-- Contenedor para la pantalla principal de la aplicación (inicialmente oculta) -->
+    <div id="main-app-screen" style="display: none;">
+      <h1>Bienvenido al Inventario, <span id="loggedInUser"></span>!</h1>
+      <p>Aquí irá tu interfaz de inventario.</p>
+      <button id="logout-button">Cerrar Sesión</button>
+    </div>
+
+    <!-- Enlazamos nuestro archivo JavaScript para la lógica de la interfaz -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>

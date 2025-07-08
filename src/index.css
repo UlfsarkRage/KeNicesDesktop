@@ -1,0 +1,120 @@
+/* Estilos básicos para centrar el contenido y darle un aspecto limpio */
+body {
+  font-family: 'Inter', sans-serif; /* Usamos la fuente Inter */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+  flex-direction: column; /* Para centrar verticalmente */
+  border-radius: 8px; /* Bordes redondeados para el cuerpo */
+}
+
+/* Estilos para las pantallas de login y la principal */
+#login-screen,
+#main-app-screen {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra suave */
+  text-align: center;
+  width: 90%; /* Ancho fluido */
+  max-width: 350px; /* Ancho máximo */
+}
+
+/* Estilos para los campos de entrada */
+input {
+  display: block;
+  width: calc(100% - 20px); /* Ancho fluido con padding */
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid #ddd;
+  border-radius: 6px; /* Bordes redondeados */
+  font-size: 16px;
+}
+
+/* Estilos para los botones */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px; /* Bordes redondeados */
+  cursor: pointer;
+  font-size: 17px;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el botón */
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
+}
+
+button:active {
+  transform: translateY(0); /* Efecto de "presión" al hacer clic */
+}
+
+/* Estilos para el mensaje de error */
+#error-message {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 600px) {
+  #login-screen,
+  #main-app-screen {
+    padding: 20px;
+  }
+  input {
+    width: calc(100% - 20px);
+  }
+}
+
+/* Nuevos estilos para la funcionalidad de Gemini API */
+#gemini-feature {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+#gemini-feature h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#productNameInput {
+  width: calc(100% - 20px);
+  margin-bottom: 15px;
+}
+
+#generateDescriptionButton {
+  background-color: #28a745; /* Un color diferente para este botón */
+}
+
+#generateDescriptionButton:hover {
+  background-color: #218838;
+}
+
+#loadingIndicator {
+  font-style: italic;
+  color: #666;
+  margin-top: 10px;
+}
+
+#generatedDescriptionOutput {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e9f7ef;
+  border: 1px solid #c3e6cb;
+  border-radius: 6px;
+  text-align: left;
+  min-height: 50px;
+  color: #155724;
+  font-size: 15px;
+  line-height: 1.5;
+  white-space: pre-wrap; /* Para preservar saltos de línea del LLM */
+}
